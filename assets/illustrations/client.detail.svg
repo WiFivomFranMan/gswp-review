@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 300" role="img"
+     class="cli-detail" data-steps="3" data-step="1"
+     aria-label="What the Wi-Fi list shows on Android and iOS, why the device joins by itself when matched, and why tapping an unmatched name causes credential prompts"
+     data-cap-1="Android shows the profile's display name as if it were a network name. iOS shows it beneath the real SSID it has matched."
+     data-cap-2="When the profile matches what the network advertises, the device joins on its own - no tap needed."
+     data-cap-3="Tapping a name that has not matched brings up manual prompts: username and password on iOS, full network settings with EAP details on Android.">
+  <style>
+    .cli-detail text { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+    .cli-detail .bg{fill:var(--soft,#fffbeb)} .cli-detail .acc{fill:var(--acc,#0b74b1)}
+    .cli-detail .sacc{fill:none;stroke:var(--acc,#0b74b1)} .cli-detail .soft{fill:var(--soft,#fffbeb)}
+    .cli-detail .ink{fill:#14211f} .cli-detail .ok{fill:#1aad55} .cli-detail .bad{fill:#d64545}
+    .cli-detail .sbad{fill:none;stroke:#d64545}
+    .cli-detail .tl{fill:var(--acc,#0b74b1);font-weight:820} .cli-detail .tm{fill:#60706d;font-weight:700}
+    .cli-detail .step{opacity:0;transition:opacity .35s ease} .cli-detail .title{opacity:0}
+    .cli-detail[data-step="1"] .s1, .cli-detail[data-step="1"] .t1,
+    .cli-detail[data-step="2"] .s2, .cli-detail[data-step="2"] .t2,
+    .cli-detail[data-step="3"] .s3, .cli-detail[data-step="3"] .t3 { opacity: 1; }
+  </style>
+
+  <rect class="bg" width="520" height="300"/>
+  <text class="tl title t1" x="28" y="40" font-size="17" textLength="252" lengthAdjust="spacingAndGlyphs">1 · What the Wi-Fi list shows</text>
+  <text class="tl title t2" x="28" y="40" font-size="17" textLength="250" lengthAdjust="spacingAndGlyphs">2 · Matched: joins by itself</text>
+  <text class="tl title t3" x="28" y="40" font-size="17" textLength="252" lengthAdjust="spacingAndGlyphs">3 · Not matched: do not tap</text>
+
+  <!-- persistent: Android phone -->
+  <rect fill="#fff" class="sacc" x="66" y="72" width="128" height="176" rx="15" stroke-width="2.5"/>
+  <text class="tm" x="100" y="266" font-size="12" textLength="52" lengthAdjust="spacingAndGlyphs">Android</text>
+  <rect class="soft" x="78" y="90" width="104" height="24" rx="5"/>
+  <text class="tm" x="86" y="106" font-size="10" textLength="64" lengthAdjust="spacingAndGlyphs">Coffee-Guest</text>
+  <rect fill="#fff" class="sacc" x="78" y="122" width="104" height="28" rx="5" stroke-width="2"/>
+  <text class="ink" x="86" y="140" font-size="10" textLength="60" lengthAdjust="spacingAndGlyphs">MyOperator</text>
+  <rect class="soft" x="78" y="158" width="104" height="24" rx="5"/>
+  <text class="tm" x="86" y="174" font-size="10" textLength="58" lengthAdjust="spacingAndGlyphs">Airport Free</text>
+
+  <!-- persistent: iOS phone -->
+  <rect fill="#fff" class="sacc" x="326" y="72" width="128" height="176" rx="15" stroke-width="2.5"/>
+  <text class="tm" x="378" y="266" font-size="12" textLength="24" lengthAdjust="spacingAndGlyphs">iOS</text>
+  <rect class="soft" x="338" y="90" width="104" height="24" rx="5"/>
+  <text class="tm" x="346" y="106" font-size="10" textLength="64" lengthAdjust="spacingAndGlyphs">Coffee-Guest</text>
+  <rect fill="#fff" class="sacc" x="338" y="122" width="104" height="36" rx="5" stroke-width="2"/>
+  <text class="ink" x="346" y="137" font-size="10" textLength="58" lengthAdjust="spacingAndGlyphs">CafeNet-5G</text>
+  <text class="tm" x="346" y="150" font-size="8" textLength="56" lengthAdjust="spacingAndGlyphs">MyOperator</text>
+  <rect class="soft" x="338" y="166" width="104" height="24" rx="5"/>
+  <text class="tm" x="346" y="182" font-size="10" textLength="58" lengthAdjust="spacingAndGlyphs">Airport Free</text>
+
+  <!-- STEP 1: where the profile name shows up -->
+  <g class="step s1">
+    <path class="sacc" d="M198 136 h34" stroke-width="1.6" stroke-dasharray="3 3"/>
+    <path class="sacc" d="M322 140 h-34" stroke-width="1.6" stroke-dasharray="3 3"/>
+    <text class="ink" x="212" y="118" font-size="11" textLength="96" lengthAdjust="spacingAndGlyphs">Profile name,</text>
+    <text class="tm" x="206" y="132" font-size="10" textLength="108" lengthAdjust="spacingAndGlyphs">shown like an SSID</text>
+    <text class="tm" x="206" y="158" font-size="10" textLength="108" lengthAdjust="spacingAndGlyphs">shown under the real</text>
+    <text class="tm" x="238" y="171" font-size="10" textLength="26" lengthAdjust="spacingAndGlyphs">SSID</text>
+  </g>
+
+  <!-- STEP 2: matched, auto-join -->
+  <g class="step s2">
+    <g transform="translate(196,136)">
+      <circle class="ok" cx="0" cy="0" r="13"/>
+      <path d="M-5.5 0 l4 4 7.5 -8.5" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <g transform="translate(324,140)">
+      <circle class="ok" cx="0" cy="0" r="13"/>
+      <path d="M-5.5 0 l4 4 7.5 -8.5" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    <text class="ink" x="222" y="196" font-size="11" textLength="76" lengthAdjust="spacingAndGlyphs">Auto-joined,</text>
+    <text class="tm" x="216" y="210" font-size="10" textLength="88" lengthAdjust="spacingAndGlyphs">no tap required</text>
+  </g>
+
+  <!-- STEP 3: tapped without a match -> credential prompts -->
+  <g class="step s3">
+    <rect fill="#fff" class="sbad" x="200" y="86" width="120" height="52" rx="7" stroke-width="2"/>
+    <text class="bad" x="210" y="104" font-size="10" textLength="100" lengthAdjust="spacingAndGlyphs">Android: full network</text>
+    <text class="bad" x="210" y="117" font-size="10" textLength="96" lengthAdjust="spacingAndGlyphs">settings, EAP details</text>
+    <text class="bad" x="210" y="130" font-size="10" textLength="76" lengthAdjust="spacingAndGlyphs">and credentials</text>
+    <rect fill="#fff" class="sbad" x="200" y="150" width="120" height="40" rx="7" stroke-width="2"/>
+    <text class="bad" x="210" y="168" font-size="10" textLength="98" lengthAdjust="spacingAndGlyphs">iOS: username and</text>
+    <text class="bad" x="210" y="181" font-size="10" textLength="86" lengthAdjust="spacingAndGlyphs">password prompt</text>
+    <text class="tm" x="204" y="212" font-size="10" textLength="112" lengthAdjust="spacingAndGlyphs">The prompt is the symptom:</text>
+    <text class="tm" x="204" y="225" font-size="10" textLength="110" lengthAdjust="spacingAndGlyphs">the profile did not match</text>
+  </g>
+</svg>
